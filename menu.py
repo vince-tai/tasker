@@ -45,6 +45,8 @@ class Menu:
                 i.priority += 1
         self.list.append(task)
         self.list.sort(key = lambda i: i.priority)
+        for j in range(len(self.list)):
+            self.list[j].priority = j + 1
     
     def settings(self):
         print("\n===Settings===")
